@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmulas Basicas do Excel</title>
+</head>
+<body>
+    <header>
+        <h1>Fórmulas Basicas do Excel</h1>
+    </header>
+    <main>
+        <h1>Operações Basicas</h1>
+        <h2>Todas TODAS as formuas precisam começar com um "=" e dps sua sintaxe</h2>
+        <p>Para editar uma formula va ate sua celula e aperte f2 ou clique 2 vezes em cima dela para editar seu comando</p>
+        <ol>
+            <li>Adicão = Ex:
+                =7 + 3
+                Comando:
+                =SOMA(Oque você desejar somar)
+            </li>
+            <li>Subtração = Ex:
+                =7 - 3
+                Comando:
+
+            </li>
+            <li>Inversão = Ex:
+                =-8
+                Comando:
+
+            </li>
+            <li>Multiplicação = Ex:
+                =4 * 3
+                Comando:
+
+            </li>
+            <li>Divisão = Ex:
+                =8 / 2
+                Comando:
+
+            </li>
+            <li>Exponenciação = Ex:
+                =5^2
+                Comando:
+
+            </li>
+            <li>Porcentagem = Ex:
+                =20%
+                Comando:
+
+            </li> 
+            
+            <li>
+                Maior e Menor = Resumindo esses 2 eles indentificam qual e o menor numero ou o maior numero ou então o 2 maior numero ou o 2 menor numero depende da sua necessidade você escolhe para usa-los e simples
+
+                =MAIOR(Lista que voce deseja verificar Ex: C3:C10;(Posição que voce queira verificar nesse caso eu quero a primeira maior então Ex: 1))
+                Comando Normal:
+                =MAIOR(C3:C10;1)
+
+                e para o menor e a mesma coisa porem inverte a função mas a estrutura e a mesma
+            </li>
+
+            <li>
+                Para contar quantos numeros/Opções/textos etc. há em um determinado espaço se usa o comando:
+                =CONT.NÚM(Lista desejada)
+                Comando Normal:
+                =CONT.NÚM(C3:C10)
+            </li>
+
+            <li>Funções Condicionais:
+                Resumindo existem 2 tipos delas ao menos os que eu conheço sendo elas:
+
+                SE e (SES = Senão) = O se so funciona se você tiver 2 possibilidades e o senão e para caso você tenha mais de 2 possibilidades
+
+                Sintaxe:
+
+                Se:
+
+                =SE(Celula="O que ela precisa ser/ou estar escrito"; "O que vai acontecer se a condição for verdadeira"; "O que vai acontecer se acondição for falsa")
+
+                =SE(B1="SP"; "Paulista"; "Carioca")
+
+                Senão:
+
+                =SES(celula="O que precisa ser"; "O que vai ser se for verdadeiro"; celula="O que precisa ser"; "O que vai aparecer/acontecer se for verdadeiro"; celula="O que precisa ser" "O uqe vai ser se for verdadeiro")
+
+                =SES(B1="SP"; "Paulista"; B1="RJ"; "Carioca"; B1="BH"; "Canhoto")
+            </li>
+
+            <li>
+                A função =SOMASE no Excel é usada para somar valores em um intervalo que atende a critérios específicos. A sua sintaxe básica é:
+
+                =SOMASE(intervalo_soma, intervalo_critérios, critério)
+
+                intervalo_soma: Intervalo de células com os valores que você deseja somar.
+                intervalo_critérios: Intervalo de células com os critérios que serão avaliados.
+                critério: Critério que determina quais valores serão somados.
+                Exemplo prático:
+
+                Suponha que você tenha uma planilha com produtos e vendas. Se você quiser somar as vendas apenas para o produto "Maçã", a fórmula seria assim:
+
+                =SOMASE(B2:B6, A2:A6, "Maçã")
+
+                Neste exemplo, B2:B6 é o intervalo de vendas, A2:A6 é o intervalo de produtos, e "Maçã" é o critério. A função resultaria na soma das vendas de maçã, ou seja, 70.
+            </li>
+
+            <li>
+                            O CONT.SE é uma função no Excel que conta o número de células em um intervalo que atende a determinado critério. A sintaxe básica é:
+
+            =CONT.SE(intervalo_critérios, critério)
+
+            intervalo_critérios: Intervalo de células que você deseja contar.
+
+            critério: Critério aplicado aos dados no intervalo_critérios. A função conta apenas as células que atendem a esse critério.
+
+            Exemplo prático com os dados da planilha:
+
+            <p>
+                <ol>
+                    <li>A _____	B</li>
+                    <li>Produto	Venda</li>
+                    <li>Maçã	____ 50</li>
+                    <li>Banana	__ 30</li>
+                    <li>Maçã	____ 20</li>
+                    <li>Laranja	__ 40</li>
+                    <li>Banana	__ 25</li>
+                </ol>
+            </p>
+
+            Se você quiser contar quantas vezes o produto
+            
+            "Maçã" aparece na coluna A, a fórmula seria assim:
+
+            =CONT.SE(A2:A6, "Maçã")
+
+            Neste exemplo:
+
+            intervalo_critérios: A2:A6 (o intervalo de produtos)
+
+            critério: "Maçã" (o critério para contar as ocorrências de maçã)
+
+            A função resultaria em 2, porque "Maçã" aparece duas vezes na coluna A.
+
+            Espero que isso ajude a entender como usar o CONT.SE no Excel!
+            </li>
+
+            <li>
+                Claro, sem problemas! Vamos simplificar ainda mais:
+
+                Suponha que você tenha uma lista de números:
+                
+                A
+                30,
+                45,
+                20,
+                35,
+                50.
+                
+                Se você quiser calcular a média apenas para os números maiores que 30, você usaria a função MÉDIASE assim:
+                
+                =MÉDIASE(A1:A5; ">30")
+                
+                Essa fórmula calcula a média apenas para os números que são maiores que 30. Espero que este exemplo sem o uso explícito de uma tabela seja mais claro!</li>
+
+                <li>
+                    Certamente, vou apresentar o exemplo sem o estilo de código:
+
+                Suponha que você tenha uma lista de produtos, suas vendas e regiões:
+
+                <ol>
+                    <li>Produto	Venda</li>	<li>Região</li>
+                    <li>Maçã	50	Norte</li>
+                    <li>Banana	30	Sul</li>
+                    <li>Maçã	20	Norte</li>
+                    <li>Laranja	40	Sul</li>
+                    <li>Banana	25	Norte</li>
+                </ol>
+
+                Agora, se você quiser contar quantas vendas de "Maçã" ocorreram na região "Norte", a fórmula seria assim:
+
+                <p>=CONT.SES(A2:A6; "Maçã"; C2:C6; "Norte")</p>
+
+                Neste exemplo:
+
+                intervalo_critérios1: A2:A6 (o intervalo de produtos)
+
+                critério1: "Maçã" (o critério para contar as ocorrências de maçã)
+
+                intervalo_critérios2: C2:C6 (o intervalo de regiões)
+
+                critério2: "Norte" (o critério para contar as ocorrências na região Norte)
+
+                A função resultaria em 2, pois há duas vendas de "Maçã" na região "Norte".
+
+                Espero que essa explicação sem o estilo de código seja mais clara para você!
+                </li>
+
+            <p>
+                <li>DICA:
+                    para facilitar as contas anteriores e mais facil voce selecionar a coluna inteira onde estão os dados para serem utilizados nas equações/formulas anteriores de um nome a elas e use esse nome para dar um nome basta SELECIONAR a coluna/linha e dps dar um novo nome a ela na barrinha acima da 1 coluna onde esta escrito os numeros das celulas da planilha
+                </li>
+            </p>
+        </ol>
+    </main>
+</body>
+</html>
